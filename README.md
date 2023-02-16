@@ -5,12 +5,12 @@ Super simple Neovim floating input.
 
 ## Why
 
-You use Telescope or Fzf-Lua to get a nice `ui.select`, but you want a nice `ui.input` too?
+You use Telescope or Fzf-Lua to get a nice `vim.ui.select`, and want a nice `vim.ui.input` too?
 
-Sure [Dressing](https://github.com/stevearc/dressing.nvim) works, but most of its code deals with
+[Dressing](https://github.com/stevearc/dressing.nvim) works, but most of its code deals with
 `ui.select`, which seems slightly overkill here.
 
-This plugin is just a simple floating window to take input, with less than 50 less of code.
+This plugin is a simple floating window to take input, with less than 50 less of code.
 You can either use it or just copy it to your configs.
 
 ## How
