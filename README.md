@@ -5,7 +5,8 @@ Super simple Neovim floating input.
 
 ## Why
 
-You use Telescope or Fzf-Lua to get a nice `vim.ui.select`, and want a nice `vim.ui.input` too?
+You use Telescope or Fzf-Lua to get a nice `vim.ui.select`, and want a nice `vim.ui.input` (e.g.
+handling LSP rename) too?
 
 [Dressing](https://github.com/stevearc/dressing.nvim) works, but most of its code deals with
 `vim.ui.select`, which seems slightly overkill here.
