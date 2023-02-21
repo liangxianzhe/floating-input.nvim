@@ -16,6 +16,9 @@ it or just copy it to your configs.
 
 ## How
 
+Note this plugin uses a new [parameter](https://github.com/neovim/neovim/pull/20184),
+which requires neovim nightly build or the upcoming 0.9 release.
+
 Add `liangxianzhe/floating-input` to your plugin manager. Then `require('floating-input').setup()`.
 
 Default is to put floating window at the center. If you like it near the cursor, override with: 
