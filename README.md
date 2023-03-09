@@ -1,7 +1,7 @@
 # floating-input.nvim
 Super simple Neovim floating input.
 
-![screenshot](https://user-images.githubusercontent.com/1334962/219470205-7412c323-abd0-4074-9c61-da9a45432d47.jpg)
+![screenshot](https://user-images.githubusercontent.com/1334962/224120029-17ad63ed-ebde-4636-aea6-deccb305ba7b.jpg)
 
 ## Why
 
