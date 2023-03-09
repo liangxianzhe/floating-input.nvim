@@ -11,8 +11,7 @@ handling LSP rename) too?
 [Dressing](https://github.com/stevearc/dressing.nvim) works, but most of its code deals with
 `vim.ui.select`, which seems slightly overkill here.
 
-This plugin is a simple floating window to take input, with ~ 50 lines of code. You can either use
-it or just copy it to your configs.
+This plugin is the simplest floating window to take input.
 
 ## How
 
@@ -21,10 +20,11 @@ which requires neovim nightly build or the upcoming 0.9 release.
 
 Add `liangxianzhe/floating-input` to your plugin manager. Then `require('floating-input').setup()`.
 
-Default is to put floating window at the center. If you like it near the cursor, override with: 
+Default is to put floating window under the cursor for LSP renaming, and at the center for other use cases. 
 
+You can also config styles, or override other window configs: 
 ```lua
 vim.ui.input = function(opts, on_confirm)
-	require("floating-input").input(opts, on_confirm, { relative = 'cursor', row = 1, col = 0 })
+	require("floating-input").input(opts, on_confirm, { border = 'none' })
 end
 ```
