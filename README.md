@@ -18,13 +18,13 @@ This plugin is the simplest floating window to take input.
 Note this plugin uses a new [parameter](https://github.com/neovim/neovim/pull/20184),
 which requires neovim nightly build or the upcoming 0.9 release.
 
-Add `liangxianzhe/floating-input` to your plugin manager. Then `require('floating-input').setup()`.
+Add `liangxianzhe/floating-input` to your plugin manager, no setup is required.
 
 Default is to put floating window under the cursor for LSP renaming, and at the center for other use cases. 
 
 You can also config styles, or override other window configs: 
 ```lua
 vim.ui.input = function(opts, on_confirm)
-	require("floating-input").input(opts, on_confirm, { border = 'none' })
+	require("floating-input").input(opts, on_confirm, { border = 'double' })
 end
 ```

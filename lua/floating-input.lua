@@ -71,6 +71,7 @@ M.input = function(opts, on_confirm, win_config)
 	})
 end
 
-M.setup = function() vim.ui.input = function(opts, on_confirm) M.input(opts, on_confirm, {}) end end
+-- Deprecated. No need to call setup, will be removed soon.
+M.setup = function() end
 
 return M
