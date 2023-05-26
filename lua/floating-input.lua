@@ -47,7 +47,7 @@ M.input = function(opts, on_confirm, win_config)
   -- Create floating window.
   local buffer = vim.api.nvim_create_buf(false, true)
   local window = vim.api.nvim_open_win(buffer, true, win_config)
-  vim.api.nvim_buf_set_text(buffer, 0, 0, 0, 0, { opts.default })
+  vim.api.nvim_buf_set_text(buffer, 0, 0, 0, 0, { default })
 
   -- Put cursor at the end of the default value
   vim.cmd('startinsert')
