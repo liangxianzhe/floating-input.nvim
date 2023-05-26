@@ -1,6 +1,6 @@
 local M = {}
 
-M.window_center = function(input_width)
+function M.window_center(input_width)
   return {
     relative = "win",
     row = vim.api.nvim_win_get_height(0) / 2 - 1,
@@ -8,7 +8,7 @@ M.window_center = function(input_width)
   }
 end
 
-M.under_cursor = function(_)
+function M.under_cursor(_)
   return {
     relative = "cursor",
     row = 1,
@@ -16,7 +16,7 @@ M.under_cursor = function(_)
   }
 end
 
-M.input = function(opts, on_confirm, win_config)
+function M.input(opts, on_confirm, win_config)
   local prompt = opts.prompt or "Input: "
   local default = opts.default or ""
 
@@ -72,7 +72,7 @@ M.input = function(opts, on_confirm, win_config)
 end
 
 -- Deprecated. No need to call setup, will be removed soon.
-M.setup = function()
+function M.setup()
 end
 
 return M
