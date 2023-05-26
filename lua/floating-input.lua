@@ -61,14 +61,9 @@ function M.input(opts, on_confirm, win_config)
     vim.cmd('stopinsert')
   end, { buffer = buffer })
 
-  -- Esc to close
-  vim.api.nvim_create_autocmd({ 'BufLeave', 'InsertLeave' }, {
-    buffer = buffer,
-    callback = function()
-      vim.api.nvim_win_close(window, true)
-      vim.cmd('stopinsert')
-    end,
-  })
+  -- Esc or q to close
+  vim.keymap.set("n", "<esc>", function() vim.api.nvim_win_close(window, true) end, { buffer = buffer })
+  vim.keymap.set("n", "q", function() vim.api.nvim_win_close(window, true) end, { buffer = buffer })
 end
 
 -- Deprecated. No need to call setup, will be removed soon.
