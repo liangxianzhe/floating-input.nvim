@@ -34,15 +34,15 @@ function M.input(opts, on_confirm, win_config)
     title = prompt,
   }
 
-  -- Place the window near cursor or at the center of the window.
-  if prompt == "New Name: " then
-    default_win_config = vim.tbl_deep_extend("force", default_win_config, M.under_cursor(input_width))
-  else
-    default_win_config = vim.tbl_deep_extend("force", default_win_config, M.window_center(input_width))
-  end
-
   -- Apply user's window config.
   win_config = vim.tbl_deep_extend("force", default_win_config, win_config)
+
+  -- Place the window near cursor or at the center of the window.
+  if prompt == "New Name: " then
+    win_config = vim.tbl_deep_extend("force", win_config, M.under_cursor(win_config.width))
+  else
+    win_config = vim.tbl_deep_extend("force", win_config, M.window_center(win_config.width))
+  end
 
   -- Create floating window.
   local buffer = vim.api.nvim_create_buf(false, true)
